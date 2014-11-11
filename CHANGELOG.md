@@ -1,3 +1,7 @@
+## v1.5.1:
+
+* add attribute "group_append" to be able to append users to a group
+
 ## v1.5.0:
 
 * [COOK-2427] - unable to install users cookbook in chef 11
