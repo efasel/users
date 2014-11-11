@@ -30,6 +30,7 @@ attribute :search_group, :kind_of => String, :name_attribute => true
 attribute :group_name, :kind_of => String, :name_attribute => true
 attribute :group_id, :kind_of => Integer, :required => true
 attribute :cookbook, :kind_of => String, :default => "users"
+attribute :group_append, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(*args)
   super

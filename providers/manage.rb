@@ -144,7 +144,14 @@ action :create do
   end
 
   group new_resource.group_name do
-    gid new_resource.group_id
+    # if we have an append flag in the recipe we do not want to overwrite
+    if new_resource.group_append
+        action :modify
+        append true
+    else
+        gid new_resource.group_id
+    end
+
     members security_group
   end
   new_resource.updated_by_last_action(true)
